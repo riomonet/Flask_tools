@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>{%block title%} {%endblock%}</title>
+    </head>
+    <body>
+
+	{% for msg in get_flashed_messages() %}
+		<p>{{ msg }}</p>
+	{% endfor %}
+
+	<h3>{% block question %} {% endblock %}</h3>
+	{%block content%}     {%endblock%}
+    </body>
+</html>

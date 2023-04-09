@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>THANK YOU!</title>
+    </head>
+    <body>
+	{% for msg in get_flashed_messages() %}
+	<p>{{ msg }}</p>
+	{% endfor %}
+
+	<h1>Thank you for taking the quiz, see your responses below</h1>
+	<ul>
+	    {% for response in responses %}
+	    <li>{{response}}</li>
+	    {% endfor %}
+	</ul>
+	
+    </body>
+</html>
